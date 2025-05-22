@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>María Clara Bustos Ramírez - CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Source+Code+Pro:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pbIY+Y+Yd4JuNf2KL+Y6G2jzAy5ajk5k37YRZq16WcU1LZ8OL7Oy+vkFo1aWEsQ0nY07qgTw+fxdT7a1rbvMRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root {
+      --bg-light: #f4f7fa;
+      --paper-light: #ffffff;
+      --text-light: #333333;
+      --bg-dark: #1e1e2e;
+      --paper-dark: #28293d;
+      --text-dark: #e0e0e0;
+      --accent: #ff7f50;
+      --highlight: #ffd700;
+    }
+    [data-theme="light"] { --bg: var(--bg-light); --paper: var(--paper-light); --text: var(--text-light); }
+    [data-theme="dark"]  { --bg: var(--bg-dark);  --paper: var(--paper-dark);  --text: var(--text-dark);  }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; padding: 2rem; transition: .3s; }
+    .container { max-width: 700px; margin:auto; background: var(--paper); border-radius:8px; padding:2rem; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
+    .theme-toggle { position:fixed; top:1rem; right:1rem; cursor:pointer; font-size:1.5rem; color:var(--accent); z-index:10; }
+    header { text-align:center; margin-bottom:2rem; }
+    header h1 { font-family:'Source Code Pro', monospace; color:var(--accent); font-size:2rem; }
+    header p { margin-top:0.5rem; font-weight:300; font-size:1rem; }
+    section + section { margin-top:1.5rem; }
+    h2 { font-family:'Source Code Pro', monospace; color:var(--highlight); font-size:1.3rem; margin-bottom:0.5rem; border-bottom:3px solid var(--accent); display:inline-block; }
+    ul { list-style:none; margin-top:0.5rem; padding-left:1rem; }
+    li { margin-bottom:0.5rem; }
+    .contact a { color:var(--accent); text-decoration:none; font-weight:600; }
+    .skills .skill { display:inline-block; background:var(--highlight); color:#000; padding:0.25rem 0.5rem; border-radius:4px; margin:0.25rem; font-size:0.9rem; }
+  </style>
+</head>
+<body data-theme="light">
+  <div class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></div>
+  <div class="container">
+    <header>
+      <h1>María Clara Bustos Ramírez</h1>
+      <p>Estudiante de Licenciatura en Administración de Empresas</p>
+      <p>En búsqueda activa de primera experiencia laboral. Responsable, ordenada y con ganas de aprender.</p>
+      <p class="contact">📍 San Juan, Argentina&nbsp;&nbsp;|&nbsp;&nbsp;✉️ <a href="mailto:mcbustosramirez@gmail.com">mcbustosramirez@gmail.com</a>&nbsp;&nbsp;|&nbsp;&nbsp;📞 +54 9 2644 18-9145</p>
+    </header>
+
+    <section>
+      <h2>🎓 Educación</h2>
+      <ul>
+        <li><strong>UNSJ</strong> — Licenciatura en Administración de Empresas (En curso)</li>
+        <li><strong>Escuela de Cocina Borja Blázquez</strong> — Cocinero Profesional (Finalizado)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>💼 Experiencia</h2>
+      <ul>
+        <li><strong>Panadería Local</strong> — Responsable de Administración Contable<br/><em>Feb 2024 – Presente</em><br/>Manejo de registros, facturación y control de inventario.</li>
+        <li><strong>Terraplén SA</strong> — Asistente Administrativo<br/><em>Abr 2023 – Ene 2024</em><br/>Apoyo en procesamiento de datos y atención al cliente.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🛠️ Habilidades</h2>
+      <div class="skills">
+        <span class="skill">Excel Avanzado</span>
+        <span class="skill">Procesamiento de Texto</span>
+        <span class="skill">Bases de Datos Básicas</span>
+        <span class="skill">PowerPoint</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>🌐 Idiomas</h2>
+      <ul>
+        <li>Español — Nativo</li>
+        <li>Inglés — Intermedio</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📬 Contacto</h2>
+      <p>Disponible para entrevistas y prácticas profesionales. ¡Conversemos!</p>
+    </section>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    toggle.addEventListener('click', () => {
+      const body = document.body;
+      const icon = toggle.querySelector('i');
+      const theme = body.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      body.setAttribute('data-theme', theme);
+      icon.classList.toggle('fa-moon'); icon.classList.toggle('fa-sun');
+    });
+  </script>
+</body>
+</html>
